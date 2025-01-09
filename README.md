@@ -38,8 +38,8 @@ npm -v
 - Clone the repository:
 
 ```bash
-git clone https://github.com/AleHS01/CISC3650_Backend.git
-cd CISC3650_Backend
+git clone https://github.com/AleHS01/restaurant-server-cisc3650.git
+cd restaurant-server-cisc3650
 ```
 - Install dependecies:
 ```bash
