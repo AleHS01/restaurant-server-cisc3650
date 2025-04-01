@@ -1,90 +1,11 @@
-# Restaurant Server (CISC 3650 Assignment)
+# 🍽️ Restaurant Server CISC3650
 
-This is a simple server for a restaurant application, implementing basic CRUD operations.   
+## 📖 Introduction
+Welcome to the Restaurant Server CISC3650 project! This application serves as a backend server for managing restaurant data, allowing users to retrieve restaurant information and manage their favorite restaurants. Built with Node.js and Express, it provides a simple API for accessing restaurant details and storing user favorites.
 
-## Tech Stack
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
-## Prerequisites
+### Key Features:
+- **Retrieve all restaurants**: Access a list of available restaurants.
+- **Get restaurant details**: Fetch specific restaurant information by ID.
+- **Manage favorites**: Add or remove restaurants from a favorites list, which is stored in a JSON file.
 
-# Mac OS
-### For this only install **brew**, Install anything below **brew**, through **brew**.
-- [brew](https://brew.sh/)
-- [node](https://nodejs.org/en)
-  
-## Install brew
-
-```bash
-
-bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-```
-
-
-## Install node
-
-```bash
-brew install node
-```
-## Check npm Version
-```bash
-npm -v
-```
-
----
-## Setup
-- Clone the repository:
-
-```bash
-git clone https://github.com/AleHS01/restaurant-server-cisc3650.git
-cd restaurant-server-cisc3650
-```
-- Install dependecies:
-```bash
-npm install
-```
----
-## Run the server
-
-```bash
-npm run start
-```
----
-- Local Backend URL:
-```bash
-http://localhost:8080
-```
----
-## Features:
-Users can perform the following operations:
-- Retrieve all restaurants.
-- Retrieve details of a specific restaurant.
-- Retrieve all favorite restaurants.
-- Add a restaurant to favorites.
-- Remove a restaurant from favorites.
----
-## Data Storage Approach
-Instead of using a database, this application utilizes JSON files for data storage. Restaurant data is stored in a file named `restaurant.json`, while favorite restaurant data is managed in `favorite.json`. Favorite data is written to a `favorite.json` file using a custom function:
-
-```javascript
-function saveFavoritesData() {
-  fs.writeFile(
-    "./favorites.json",
-    JSON.stringify(favorites, null, 2),
-    (err) => {
-      if (err) {
-        console.error("Error saving data:", err);
-      }
-    }
-  );
-}
-```
-## Deployment
-
-This project is deployed using Vercel, though it is not currently active. You can deploy your own instance by following these steps:
-- Visit Vercel and create an account.
-- Link your GitHub repository to Vercel.
-- Set up deployment settings and deploy the project.
-
+This project is designed to be a straightforward example of a RESTful API using Express, showcasing essential backend functionalities.
